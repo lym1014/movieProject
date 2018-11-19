@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src=""></script>
+<script>
+    $(window).scroll(function(){
+       if($(window).scrollTop() === $(document).height() - $(window).height())
+       {
+           var divs = document.getElementsByTagName("DIV");//获取页面中所有div
+
+    var div = divs[divs.length-1];//获取第i个div
+           console.log(div);
+    var divParent = div.parentNode;//获取该div的父节点
+    var elementNode = document.createElement("div");
+
+
+        //不存在则直接添加到最后,appendChild默认添加到divParent的最后
+        var bbb = divParent.appendChild(elementNode);
+        var aaa = document.createElement("img");
+        bbb.appendChild(aaa);
+        aaa.setAttribute('src','../../static/base/images/logo.png');
+        console.log(aaa)
+       }
+    });
+</script>
+</head>
+<body>
+<div id="aa">
+    <div id="bb"></div>
+    <div id="cc"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
